@@ -1,1 +1,12 @@
 XPath 
+
+Absolute XPath (not recommended) - /html/body/div[1]/div/div/div/div/div/div/div[1]/div[2]/div/div/div[1]/div/div[3]/div/div/div/div/div/div/div/div/div[2]/form/div/div[1]/div/div[4]/div/div/div/div[1]/div/span/span
+
+Relative XPath - 
+
+//tagname[@attribute='']
+//tagname[text()='']
+
+
+Example: verify it using ctrl+f 
+//span[text()='Log in']
