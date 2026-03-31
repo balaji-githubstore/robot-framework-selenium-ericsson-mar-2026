@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-03-31T15:35:46.547497" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1 Basic Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo1_basic_suite.robot">
+<test id="s1-t1" name="TC1" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:46.914332" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-03-31T15:35:46.913905" elapsed="0.890691"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-03-31T15:35:47.804981" elapsed="0.028279"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:47.833872" level="INFO">Opening url 'https://www.facebook.com/'</msg>
+<arg>url=https://www.facebook.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-03-31T15:35:47.833585" elapsed="1.398051"/>
+</kw>
+<kw name="Get Title" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:49.239836" level="INFO">${actual_title} = Facebook</msg>
+<var>${actual_title}</var>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.232029" elapsed="0.008002"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.240275" elapsed="0.000634"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:49.241756" level="INFO">Typing text 'hello123@gmail.com' into text field 'name=email'.</msg>
+<arg>name=email</arg>
+<arg>hello123@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.241177" elapsed="0.229271"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:49.471276" level="INFO">Typing password into text field 'name=pass'.</msg>
+<msg time="2026-03-31T15:35:49.518068" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name=pass</arg>
+<arg>password</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.470838" elapsed="0.152775"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-03-31T15:35:49.624489" level="INFO">Clicking element 'xpath=//span[text()='Log in']'.</msg>
+<arg>xpath=//span[text()='Log in']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.624015" elapsed="0.144792"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-03-31T15:35:54.770856" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-03-31T15:35:49.769152" elapsed="5.002585"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-03-31T15:35:54.772460" elapsed="2.239672"/>
+</kw>
+<status status="PASS" start="2026-03-31T15:35:46.912621" elapsed="10.100414"/>
+</test>
+<status status="PASS" start="2026-03-31T15:35:46.567854" elapsed="10.446892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Demo1 Basic Suite" id="s1" pass="1" fail="0" skip="0">Demo1 Basic Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
