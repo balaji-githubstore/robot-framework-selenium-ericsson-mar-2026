@@ -34,4 +34,3 @@ TC4
 #   print final list
     Log To Console    ${fruits}
 
-
