@@ -5,6 +5,7 @@ Library    String
 
 *** Test Cases ***
 TC1
+#    Log To Console    ${browser_name}
     Log To Console    message=hello world
     Log To Console    Welcome to robot framework session
     

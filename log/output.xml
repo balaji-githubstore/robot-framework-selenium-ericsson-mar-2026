@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T10:16:01.535423" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1 Basic Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo1_basic_suite.robot">
+<test id="s1-t1" name="TC2" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:01.823801" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-04-01T10:16:01.823387" elapsed="0.775364"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-04-01T10:16:02.599116" elapsed="0.042281"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-04-01T10:16:02.641708" elapsed="0.001642"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:02.643923" level="INFO">Opening url 'https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk'</msg>
+<arg>url=https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-04-01T10:16:02.643573" elapsed="2.389792"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.034264" level="INFO">Clicking element 'id=onetrust-accept-btn-handler'.</msg>
+<arg>id=onetrust-accept-btn-handler</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.033713" elapsed="0.301359"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.335728" level="INFO">Typing text 'john' into text field 'name=UserFirstName'.</msg>
+<arg>name=UserFirstName</arg>
+<arg>john</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.335374" elapsed="0.127913"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.463938" level="INFO">Typing text 'wick' into text field 'name=UserLastName'.</msg>
+<arg>name=UserLastName</arg>
+<arg>wick</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.463592" elapsed="0.107902"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.572329" level="INFO">Selecting options from selection list 'name=CompanyEmployees' by label 21 - 200 employees.</msg>
+<arg>name=CompanyEmployees</arg>
+<arg>21 - 200 employees</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.571895" elapsed="0.125489"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.698180" level="INFO">Selecting options from selection list 'name=CompanyCountry' by label Germany.</msg>
+<arg>name=CompanyCountry</arg>
+<arg>Germany</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.697691" elapsed="0.097710"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:05.795922" level="INFO">Clicking element 'xpath=(//div[@class='checkbox-ui'])[2]'.</msg>
+<arg>xpath=(//div[@class='checkbox-ui'])[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.795646" elapsed="0.067373"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>name=start my free trial</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2026-04-01T10:16:05.863289" elapsed="0.299882"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:06.163735" level="INFO">Clicking element 'name=start my free trial'.</msg>
+<arg>name=start my free trial</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:06.163451" elapsed="0.068821"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2026-04-01T10:16:06.258285" level="INFO">${actual_header} = Start your free trial today.</msg>
+<var>${actual_header}</var>
+<arg>xpath=//span[contains(text(),'Start your free')]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T10:16:06.232582" elapsed="0.025850"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${actual_header}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-01T10:16:06.258623" elapsed="0.000557"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${actual_header}</arg>
+<arg>Start your free trial today.</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-04-01T10:16:06.259366" elapsed="0.000392"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-04-01T10:16:09.260458" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-04-01T10:16:06.259971" elapsed="3.000751"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-04-01T10:16:09.260944" elapsed="2.223764"/>
+</kw>
+<status status="PASS" start="2026-04-01T10:16:01.822042" elapsed="9.662953"/>
+</test>
+<status status="PASS" start="2026-04-01T10:16:01.550169" elapsed="9.935362"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Demo1 Basic Suite" id="s1" pass="1" fail="0" skip="0">Demo1 Basic Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
