@@ -1,121 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T10:16:01.535423" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo1 Basic Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo1_basic_suite.robot">
-<test id="s1-t1" name="TC2" line="18">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T11:10:22.481373" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo2 Tabs Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo2_tabs_suite.robot">
+<test id="s1-t1" name="TC2 Switch Tab Using NEW and MAIN" line="20">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:01.823801" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-01T11:10:22.772159" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T10:16:01.823387" elapsed="0.775364"/>
+<status status="PASS" start="2026-04-01T11:10:22.771758" elapsed="0.848383"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T10:16:02.599116" elapsed="0.042281"/>
+<status status="PASS" start="2026-04-01T11:10:23.620480" elapsed="0.035645"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T10:16:02.641708" elapsed="0.001642"/>
+<status status="PASS" start="2026-04-01T11:10:23.656445" elapsed="0.001510"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:02.643923" level="INFO">Opening url 'https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk'</msg>
-<arg>url=https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk</arg>
+<msg time="2026-04-01T11:10:23.658375" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<arg>url=https://opensource-demo.orangehrmlive.com/</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T10:16:02.643573" elapsed="2.389792"/>
+<status status="PASS" start="2026-04-01T11:10:23.658157" elapsed="26.625320"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.034264" level="INFO">Clicking element 'id=onetrust-accept-btn-handler'.</msg>
-<arg>id=onetrust-accept-btn-handler</arg>
+<msg time="2026-04-01T11:10:50.284408" level="INFO">Clicking element 'xpath=//a[contains(@href,'facebook.com')]'.</msg>
+<msg time="2026-04-01T11:10:50.289614" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.177)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e54129c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff6e513a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff6e4e9db2d]
+	chromedriver!(No symbol) [0x7ff6e4e74322]
+	chromedriver!(No symbol) [0x7ff6e4f26e86]
+	chromedriver!(No symbol) [0x7ff6e4f43482]
+	chromedriver!(No symbol) [0x7ff6e4ee9298]
+	chromedriver!(No symbol) [0x7ff6e4eea183]
+	chromedriver!GetHandleVerifier [0x7ff6e543de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff6e5438588+313348]
+	chromedriver!GetHandleVerifier [0x7ff6e5459d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff6e5156785+31545]
+	chromedriver!GetHandleVerifier [0x7ff6e515facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff6e5143634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff6e51437e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff6e5127e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff80e99257d+1d]
+	ntdll!RtlUserThreadStart [0x7ff80f52af08+28]
+</msg>
+<msg time="2026-04-01T11:10:50.290269" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.177)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e54129c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff6e513a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff6e4e9db2d]
+	chromedriver!(No symbol) [0x7ff6e4e74322]
+	chromedriver!(No symbol) [0x7ff6e4f26e86]
+	chromedriver!(No symbol) [0x7ff6e4f43482]
+	chromedriver!(No symbol) [0x7ff6e4ee9298]
+	chromedriver!(No symbol) [0x7ff6e4eea183]
+	chromedriver!GetHandleVerifier [0x7ff6e543de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff6e5438588+313348]
+	chromedriver!GetHandleVerifier [0x7ff6e5459d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff6e5156785+31545]
+	chromedriver!GetHandleVerifier [0x7ff6e515facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff6e5143634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff6e51437e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff6e5127e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff80e99257d+1d]
+	ntdll!RtlUserThreadStart [0x7ff80f52af08+28]
+</msg>
+<arg>xpath=//a[contains(@href,'facebook.com')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.033713" elapsed="0.301359"/>
+<status status="FAIL" start="2026-04-01T11:10:50.283809" elapsed="0.015499">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.177)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e54129c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff6e513a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff6e4e9db2d]
+	chromedriver!(No symbol) [0x7ff6e4e74322]
+	chromedriver!(No symbol) [0x7ff6e4f26e86]
+	chromedriver!(No symbol) [0x7ff6e4f43482]
+	chromedriver!(No symbol) [0x7ff6e4ee9298]
+	chromedriver!(No symbol) [0x7ff6e4eea183]
+	chromedriver!GetHandleVerifier [0x7ff6e543de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff6e5438588+313348]
+	chromedriver!GetHandleVerifier [0x7ff6e5459d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff6e5156785+31545]
+	chromedriver!GetHandleVerifier [0x7ff6e515facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff6e5143634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff6e51437e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff6e5127e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff80e99257d+1d]
+	ntdll!RtlUserThreadStart [0x7ff80f52af08+28]
+</status>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T11:10:50.299602" elapsed="0.000117"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>xpath=//span[contains(text(),'Forgotten password')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T11:10:50.299855" elapsed="0.000080"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>NEW</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T11:10:50.300055" elapsed="0.000069"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.335728" level="INFO">Typing text 'john' into text field 'name=UserFirstName'.</msg>
-<arg>name=UserFirstName</arg>
-<arg>john</arg>
+<arg>xpath=//span[contains(text(),'Enter your mobile number')]/following::input</arg>
+<arg>hello@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.335374" elapsed="0.127913"/>
+<status status="NOT RUN" start="2026-04-01T11:10:50.300235" elapsed="0.000084"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.463938" level="INFO">Typing text 'wick' into text field 'name=UserLastName'.</msg>
-<arg>name=UserLastName</arg>
-<arg>wick</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.463592" elapsed="0.107902"/>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>MAIN</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="NOT RUN" start="2026-04-01T11:10:50.300437" elapsed="0.000068"/>
 </kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.572329" level="INFO">Selecting options from selection list 'name=CompanyEmployees' by label 21 - 200 employees.</msg>
-<arg>name=CompanyEmployees</arg>
-<arg>21 - 200 employees</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.571895" elapsed="0.125489"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.698180" level="INFO">Selecting options from selection list 'name=CompanyCountry' by label Germany.</msg>
-<arg>name=CompanyCountry</arg>
-<arg>Germany</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.697691" elapsed="0.097710"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:05.795922" level="INFO">Clicking element 'xpath=(//div[@class='checkbox-ui'])[2]'.</msg>
-<arg>xpath=(//div[@class='checkbox-ui'])[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.795646" elapsed="0.067373"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>name=start my free trial</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2026-04-01T10:16:05.863289" elapsed="0.299882"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:06.163735" level="INFO">Clicking element 'name=start my free trial'.</msg>
-<arg>name=start my free trial</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:06.163451" elapsed="0.068821"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T10:16:06.258285" level="INFO">${actual_header} = Start your free trial today.</msg>
-<var>${actual_header}</var>
-<arg>xpath=//span[contains(text(),'Start your free')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T10:16:06.232582" elapsed="0.025850"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${actual_header}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T10:16:06.258623" elapsed="0.000557"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${actual_header}</arg>
-<arg>Start your free trial today.</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-04-01T10:16:06.259366" elapsed="0.000392"/>
+<kw name="Log Title" owner="SeleniumLibrary">
+<doc>Logs and returns the title of the current page.</doc>
+<status status="NOT RUN" start="2026-04-01T11:10:50.300610" elapsed="0.000109"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T10:16:09.260458" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T10:16:06.259971" elapsed="3.000751"/>
+<status status="NOT RUN" start="2026-04-01T11:10:50.300838" elapsed="0.000226"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T10:16:09.260944" elapsed="2.223764"/>
+<status status="NOT RUN" start="2026-04-01T11:10:50.301259" elapsed="0.000088"/>
 </kw>
-<status status="PASS" start="2026-04-01T10:16:01.822042" elapsed="9.662953"/>
+<status status="FAIL" start="2026-04-01T11:10:22.770486" elapsed="27.531088">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.177)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e54129c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff6e513a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff6e4e9db2d]
+	chromedriver!(No symbol) [0x7ff6e4e74322]
+	chromedriver!(No symbol) [0x7ff6e4f26e86]
+	chromedriver!(No symbol) [0x7ff6e4f43482]
+	chromedriver!(No symbol) [0x7ff6e4ee9298]
+	chromedriver!(No symbol) [0x7ff6e4eea183]
+	chromedriver!GetHandleVerifier [0x7ff6e543de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff6e5438588+313348]
+	chromedriver!GetHandleVerifier [0x7ff6e5459d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff6e5156785+31545]
+	chromedriver!GetHandleVerifier [0x7ff6e515facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff6e5143634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff6e51437e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff6e5127e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff80e99257d+1d]
+	ntdll!RtlUserThreadStart [0x7ff80f52af08+28]
+</status>
 </test>
-<status status="PASS" start="2026-04-01T10:16:01.550169" elapsed="9.935362"/>
+<status status="FAIL" start="2026-04-01T11:10:22.499124" elapsed="27.803215"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Demo1 Basic Suite" id="s1" pass="1" fail="0" skip="0">Demo1 Basic Suite</stat>
+<stat name="Demo2 Tabs Suite" id="s1" pass="0" fail="1" skip="0">Demo2 Tabs Suite</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-04-01T11:10:50.289614" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.177)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff6e54129c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff6e513a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff6e4e9db2d]
+	chromedriver!(No symbol) [0x7ff6e4e74322]
+	chromedriver!(No symbol) [0x7ff6e4f26e86]
+	chromedriver!(No symbol) [0x7ff6e4f43482]
+	chromedriver!(No symbol) [0x7ff6e4ee9298]
+	chromedriver!(No symbol) [0x7ff6e4eea183]
+	chromedriver!GetHandleVerifier [0x7ff6e543de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff6e5438588+313348]
+	chromedriver!GetHandleVerifier [0x7ff6e5459d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff6e5156785+31545]
+	chromedriver!GetHandleVerifier [0x7ff6e515facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff6e5143634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff6e51437e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff6e5127e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ff80e99257d+1d]
+	ntdll!RtlUserThreadStart [0x7ff80f52af08+28]
+</msg>
 </errors>
 </robot>
