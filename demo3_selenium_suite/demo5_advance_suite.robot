@@ -30,3 +30,25 @@ TC3 CSS Selector
     Select From List By Label    css=select[name='languageChoice']      Arabic
     Sleep    3s
     Close Browser
+
+TC4 Javascript Option 1 Using QuerySelector
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    20s
+    Go To    url=https://demo.openemr.io/b/openemr/interface/login/login.php?site=default
+
+    Execute Javascript  document.querySelector('#authUser').value='jack'
+    Sleep    3s
+    Close Browser
+
+TC4 Javascript Option 2 Using QuerySelector
+    Open Browser    browser=chrome
+    Maximize Browser Window
+    Set Selenium Implicit Wait    20s
+    Go To    url=https://demo.openemr.io/b/openemr/interface/login/login.php?site=default
+
+    ${ele}      Get WebElement    xpath=//input[@id='authUser']
+
+    Execute Javascript  arguments[0].value='jack'   ARGUMENTS   ${ele}
+    Sleep    3s
+    Close Browser

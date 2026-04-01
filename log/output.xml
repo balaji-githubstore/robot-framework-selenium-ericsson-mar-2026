@@ -1,63 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T14:22:21.919150" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T14:38:14.695873" rpa="false" schemaversion="5">
 <suite id="s1" name="Demo5 Advance Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo5_advance_suite.robot">
-<test id="s1-t1" name="TC3 CSS Selector" line="23">
+<test id="s1-t1" name="TC4 Javascript Option 2 Using QuerySelector" line="44">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-01T14:22:22.201733" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-01T14:38:15.017780" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T14:22:22.201311" elapsed="0.712823"/>
+<status status="PASS" start="2026-04-01T14:38:15.016965" elapsed="0.790156"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T14:22:22.914522" elapsed="0.039698"/>
+<status status="PASS" start="2026-04-01T14:38:15.807916" elapsed="0.036502"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T14:22:22.954505" elapsed="0.001542"/>
+<status status="PASS" start="2026-04-01T14:38:15.845167" elapsed="0.001511"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T14:22:22.956470" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<msg time="2026-04-01T14:38:15.847366" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
 <arg>url=https://demo.openemr.io/b/openemr/interface/login/login.php?site=default</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T14:22:22.956266" elapsed="4.508973"/>
+<status status="PASS" start="2026-04-01T14:38:15.847123" elapsed="15.027529"/>
 </kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T14:22:27.466369" level="INFO">Typing text 'admin' into text field 'css=#authUser'.</msg>
-<arg>css=#authUser</arg>
-<arg>admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T14:22:27.465552" elapsed="0.115101"/>
+<kw name="Get WebElement" owner="SeleniumLibrary">
+<msg time="2026-04-01T14:38:30.906247" level="INFO">${ele} = &lt;selenium.webdriver.remote.webelement.WebElement (session="0df599c13291114901a399450e4d66d7", element="f.A91AE1CE2D326437DCC595D33BBD9EFD.d.CF2932DE899FC1A8B4728EB00408FDC5.e.4")&gt;</msg>
+<var>${ele}</var>
+<arg>xpath=//input[@id='authUser']</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="PASS" start="2026-04-01T14:38:30.875036" elapsed="0.031410"/>
 </kw>
-<kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2026-04-01T14:22:27.581388" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
-<msg time="2026-04-01T14:22:27.620710" level="INFO">Temporally setting log level to: NONE</msg>
-<arg>css=#clearPass</arg>
-<arg>pass</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T14:22:27.581062" elapsed="0.091377"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2026-04-01T14:22:27.673086" level="INFO">Selecting options from selection list 'css=select[name='languageChoice']' by label Arabic.</msg>
-<arg>css=select[name='languageChoice']</arg>
-<arg>Arabic</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2026-04-01T14:22:27.672733" elapsed="0.416354"/>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2026-04-01T14:38:30.907658" level="INFO">Executing JavaScript:
+arguments[0].value='jack'
+By using argument:
+'&lt;selenium.webdriver.remote.webelement.WebElement (session="0df599c13291114901a399450e4d66d7", element="f.A91AE1CE2D326437DCC595D33BBD9EFD.d.CF2932DE899FC1A8B4728EB00408FDC5.e.4")&gt;'</msg>
+<arg>arguments[0].value='jack'</arg>
+<arg>ARGUMENTS</arg>
+<arg>${ele}</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2026-04-01T14:38:30.906806" elapsed="0.009477"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T14:22:31.090378" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-04-01T14:38:33.917890" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T14:22:28.089398" elapsed="3.001273"/>
+<status status="PASS" start="2026-04-01T14:38:30.916588" elapsed="3.001624"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T14:22:31.090901" elapsed="2.162136"/>
+<status status="PASS" start="2026-04-01T14:38:33.918442" elapsed="2.291817"/>
 </kw>
-<status status="PASS" start="2026-04-01T14:22:22.199747" elapsed="11.053601"/>
+<status status="PASS" start="2026-04-01T14:38:15.015184" elapsed="21.195428"/>
 </test>
-<status status="PASS" start="2026-04-01T14:22:21.933635" elapsed="11.320372"/>
+<status status="PASS" start="2026-04-01T14:38:14.711405" elapsed="21.499992"/>
 </suite>
 <statistics>
 <total>
