@@ -1,67 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T12:13:53.069059" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo3 Alert Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo3_alert_suite.robot">
-<test id="s1-t1" name="TC1 Javascript Alert" line="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T12:50:45.503796" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo4 Frame Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo4_frame_suite.robot">
+<test id="s1-t1" name="TC1 Frame" line="5">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:13:53.325025" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-01T12:50:45.802753" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T12:13:53.324651" elapsed="0.671136"/>
+<status status="PASS" start="2026-04-01T12:50:45.802367" elapsed="0.830039"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T12:13:53.996118" elapsed="0.039028"/>
+<status status="PASS" start="2026-04-01T12:50:46.632784" elapsed="0.026028"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.035459" elapsed="0.006652"/>
+<status status="PASS" start="2026-04-01T12:50:46.659120" elapsed="0.001453"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:13:54.042556" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
-<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
+<msg time="2026-04-01T12:50:46.661016" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking'</msg>
+<arg>url=https://netbanking.hdfcbank.com/netbanking</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.042358" elapsed="0.130216"/>
+<status status="PASS" start="2026-04-01T12:50:46.660798" elapsed="1.162104"/>
+</kw>
+<kw name="Select Frame" owner="SeleniumLibrary">
+<msg time="2026-04-01T12:50:47.823978" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
+<arg>xpath=//frame[@name='login_page']</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<status status="PASS" start="2026-04-01T12:50:47.823173" elapsed="0.038049"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-04-01T12:50:47.861867" level="INFO">Typing text 'john123' into text field 'name=fldLoginUserId'.</msg>
+<arg>name=fldLoginUserId</arg>
+<arg>john123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T12:50:47.861514" elapsed="0.082626"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:13:54.173293" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
-<arg>xpath=//img[@alt='Go']</arg>
+<msg time="2026-04-01T12:50:47.945085" level="INFO">Clicking element 'link=CONTINUE'.</msg>
+<arg>link=CONTINUE</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.172840" elapsed="0.125645"/>
+<status status="PASS" start="2026-04-01T12:50:47.944704" elapsed="0.533703"/>
 </kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:13:54.299208" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:20</msg>
-<msg time="2026-04-01T12:13:54.306731" level="INFO">${actual_alert_text} = Customer ID  cannot be left blank.</msg>
-<var>${actual_alert_text}</var>
-<arg>action=ACCEPT</arg>
-<arg>timeout=20s</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.298790" elapsed="0.008122"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${actual_alert_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.307128" elapsed="0.000731"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${actual_alert_text}</arg>
-<arg>Customer ID${SPACE}${SPACE}cannot be left blank.</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.308065" elapsed="0.000505"/>
+<kw name="Unselect Frame" owner="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" start="2026-04-01T12:50:48.478895" elapsed="0.002831"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T12:13:57.309639" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-04-01T12:50:51.521291" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T12:13:54.308707" elapsed="3.001187"/>
+<status status="PASS" start="2026-04-01T12:50:48.481980" elapsed="3.040925"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T12:13:57.310097" elapsed="2.138868"/>
+<status status="PASS" start="2026-04-01T12:50:51.523223" elapsed="2.243674"/>
 </kw>
-<status status="PASS" start="2026-04-01T12:13:53.323671" elapsed="6.125587"/>
+<status status="PASS" start="2026-04-01T12:50:45.801084" elapsed="7.966137"/>
 </test>
-<status status="PASS" start="2026-04-01T12:13:53.082438" elapsed="6.367477"/>
+<status status="PASS" start="2026-04-01T12:50:45.522110" elapsed="8.245992"/>
 </suite>
 <statistics>
 <total>
@@ -70,7 +67,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Demo3 Alert Suite" id="s1" pass="1" fail="0" skip="0">Demo3 Alert Suite</stat>
+<stat name="Demo4 Frame Suite" id="s1" pass="1" fail="0" skip="0">Demo4 Frame Suite</stat>
 </suite>
 </statistics>
 <errors>
