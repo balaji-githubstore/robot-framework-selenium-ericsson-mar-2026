@@ -7,6 +7,21 @@ Relative XPath -
 //tagname[@attribute='']
 //tagname[text()='']
 
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
+
+
+Grouping of xpath - count at 1 
+(//div[@class='checkbox-ui'])[2]
+
 
 Example: verify it using ctrl+f 
 //span[text()='Log in']
+//button[text()='Accept All Cookies']
+//div[@class='checkbox-ui']
+
+//input[contains(@id,'UserFirstName')]
+
+//span[contains(text(),'your free')]
+
