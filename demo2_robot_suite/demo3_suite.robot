@@ -18,4 +18,9 @@ TC2 For loop
        Log To Console    ${fruits}[${i}]
    END
 
-   
+TC3 Advance For Loop
+   @{fruits}   Create List     mango   orange  grapes   jackfruit    tomato
+
+    FOR    ${fruit}    IN    @{fruits}
+        Log To Console    ${fruit}
+    END

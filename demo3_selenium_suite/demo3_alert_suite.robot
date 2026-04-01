@@ -1,9 +1,11 @@
 *** Settings ***
 Library     SeleniumLibrary
 
+Test Setup      Open Browser    browser=chrome
+Test Teardown       Close Browser
+
 *** Test Cases ***
 TC1 Javascript Alert
-    Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Go To    url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm
@@ -15,7 +17,6 @@ TC1 Javascript Alert
     Close Browser
 
 TC1 Javascript Alert2
-    Open Browser    browser=chrome
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Go To    url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm

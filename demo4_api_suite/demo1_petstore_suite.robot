@@ -1,9 +1,11 @@
 *** Settings ***
 Library     RequestsLibrary
 
+Suite Setup     Create Session    alias=petstore    url=https://petstore.swagger.io/v2
+Suite Teardown      Delete All Sessions
+
 *** Test Cases ***
 TC1 Verify Valid PetId
-    Create Session    alias=petstore    url=https://petstore.swagger.io/v2
     ${response}    GET On Session      alias=petstore      url=/pet/5       expected_status=200
     Log    ${response.json()}
     Log    ${response.json()}[id]
@@ -16,7 +18,6 @@ TC1 Verify Valid PetId
     Should Contain    ${response.text}    5
 
 TC2 Verify Invalid PetId
-    Create Session    alias=petstore    url=https://petstore.swagger.io/v2
     ${response}    GET On Session      alias=petstore      url=/pet/5777   expected_status=404
     Status Should Be    404
 #    print the message from the json
@@ -24,7 +25,6 @@ TC2 Verify Invalid PetId
     Should Be Equal As Strings    ${response.json()}[message]    Pet not found
 
 TC3 Get Pet By Status
-    Create Session    alias=petstore    url=https://petstore.swagger.io/v2
     ${response}    GET On Session      alias=petstore      url=/pet/findByStatus?status=available   expected_status=200
     Log     ${response.json()}[0][status]
 #    get status of first pet and log it
