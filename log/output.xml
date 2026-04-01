@@ -1,64 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T12:50:45.503796" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo4 Frame Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo4_frame_suite.robot">
-<test id="s1-t1" name="TC1 Frame" line="5">
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T14:22:21.919150" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo5 Advance Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo5_advance_suite.robot">
+<test id="s1-t1" name="TC3 CSS Selector" line="23">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:50:45.802753" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<msg time="2026-04-01T14:22:22.201733" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T12:50:45.802367" elapsed="0.830039"/>
+<status status="PASS" start="2026-04-01T14:22:22.201311" elapsed="0.712823"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T12:50:46.632784" elapsed="0.026028"/>
+<status status="PASS" start="2026-04-01T14:22:22.914522" elapsed="0.039698"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>20s</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T12:50:46.659120" elapsed="0.001453"/>
+<status status="PASS" start="2026-04-01T14:22:22.954505" elapsed="0.001542"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:50:46.661016" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking'</msg>
-<arg>url=https://netbanking.hdfcbank.com/netbanking</arg>
+<msg time="2026-04-01T14:22:22.956470" level="INFO">Opening url 'https://demo.openemr.io/b/openemr/interface/login/login.php?site=default'</msg>
+<arg>url=https://demo.openemr.io/b/openemr/interface/login/login.php?site=default</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T12:50:46.660798" elapsed="1.162104"/>
-</kw>
-<kw name="Select Frame" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:50:47.823978" level="INFO">Selecting frame 'xpath=//frame[@name='login_page']'.</msg>
-<arg>xpath=//frame[@name='login_page']</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<status status="PASS" start="2026-04-01T12:50:47.823173" elapsed="0.038049"/>
+<status status="PASS" start="2026-04-01T14:22:22.956266" elapsed="4.508973"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:50:47.861867" level="INFO">Typing text 'john123' into text field 'name=fldLoginUserId'.</msg>
-<arg>name=fldLoginUserId</arg>
-<arg>john123</arg>
+<msg time="2026-04-01T14:22:27.466369" level="INFO">Typing text 'admin' into text field 'css=#authUser'.</msg>
+<arg>css=#authUser</arg>
+<arg>admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T12:50:47.861514" elapsed="0.082626"/>
+<status status="PASS" start="2026-04-01T14:22:27.465552" elapsed="0.115101"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T12:50:47.945085" level="INFO">Clicking element 'link=CONTINUE'.</msg>
-<arg>link=CONTINUE</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T12:50:47.944704" elapsed="0.533703"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2026-04-01T14:22:27.581388" level="INFO">Typing password into text field 'css=#clearPass'.</msg>
+<msg time="2026-04-01T14:22:27.620710" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css=#clearPass</arg>
+<arg>pass</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-04-01T14:22:27.581062" elapsed="0.091377"/>
 </kw>
-<kw name="Unselect Frame" owner="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" start="2026-04-01T12:50:48.478895" elapsed="0.002831"/>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-04-01T14:22:27.673086" level="INFO">Selecting options from selection list 'css=select[name='languageChoice']' by label Arabic.</msg>
+<arg>css=select[name='languageChoice']</arg>
+<arg>Arabic</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-04-01T14:22:27.672733" elapsed="0.416354"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T12:50:51.521291" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-04-01T14:22:31.090378" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T12:50:48.481980" elapsed="3.040925"/>
+<status status="PASS" start="2026-04-01T14:22:28.089398" elapsed="3.001273"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T12:50:51.523223" elapsed="2.243674"/>
+<status status="PASS" start="2026-04-01T14:22:31.090901" elapsed="2.162136"/>
 </kw>
-<status status="PASS" start="2026-04-01T12:50:45.801084" elapsed="7.966137"/>
+<status status="PASS" start="2026-04-01T14:22:22.199747" elapsed="11.053601"/>
 </test>
-<status status="PASS" start="2026-04-01T12:50:45.522110" elapsed="8.245992"/>
+<status status="PASS" start="2026-04-01T14:22:21.933635" elapsed="11.320372"/>
 </suite>
 <statistics>
 <total>
@@ -67,7 +66,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Demo4 Frame Suite" id="s1" pass="1" fail="0" skip="0">Demo4 Frame Suite</stat>
+<stat name="Demo5 Advance Suite" id="s1" pass="1" fail="0" skip="0">Demo5 Advance Suite</stat>
 </suite>
 </statistics>
 <errors>
