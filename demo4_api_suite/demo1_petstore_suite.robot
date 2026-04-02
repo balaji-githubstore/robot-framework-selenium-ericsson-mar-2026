@@ -6,7 +6,7 @@ Suite Teardown      Delete All Sessions
 
 *** Test Cases ***
 TC1 Verify Valid PetId
-    ${response}    GET On Session      alias=petstore      url=/pet/5       expected_status=200
+    ${response}    GET On Session      alias=petstore      url=/pet/605       expected_status=200
     Log    ${response.json()}
     Log    ${response.json()}[id]
     Log    ${response.json()}[name]
@@ -14,8 +14,8 @@ TC1 Verify Valid PetId
     Log    ${response.json()}[tags][0][id]
 
     ${actual_id}     Convert To String    ${response.json()}[id]
-    Should Be Equal As Strings     ${actual_id}     5
-    Should Contain    ${response.text}    5
+    Should Be Equal As Strings     ${actual_id}     605
+    Should Contain    ${response.text}    605
 
 TC2 Verify Invalid PetId
     ${response}    GET On Session      alias=petstore      url=/pet/5777   expected_status=404
