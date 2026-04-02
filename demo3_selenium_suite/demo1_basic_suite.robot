@@ -20,7 +20,9 @@ TC2
     Maximize Browser Window
     Set Selenium Implicit Wait    20s
     Go To    url=https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk
-    Click Element    id=onetrust-accept-btn-handler
+
+    Run Keyword And Ignore Error    Click Element    id=onetrust-accept-btn-handler
+
     Input Text    name=UserFirstName    john
     Input Text    name=UserLastName    wick
     Select From List By Label    name=CompanyEmployees      21 - 200 employees
