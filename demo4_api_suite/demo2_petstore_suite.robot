@@ -24,4 +24,19 @@ TC2 Update Valid Pet
     Log    ${response.json()}
     Should Be Equal As Strings    ${response.json()}[name]    dog-605
 
-#TC3 Delete Valid Pet
+TC3 Get Valid PetId
+    ${response}    GET On Session      alias=petstore      url=/pet/605       expected_status=200
+    ${actual_id}     Convert To String    ${response.json()}[id]
+    Should Be Equal As Strings     ${actual_id}     605
+    Should Be Equal As Strings    ${response.json()}[name]    dog-605
+
+
+TC3 Delete Valid Pet
+    &{headers}  Create Dictionary   api_key=special-key123
+    ${response}     DELETE On Session   alias=petstore      url=pet/605     headers=${headers}     expected_status=200
+    Log    ${response.json()}
+
+TC4 Delete Invalid Pet
+    &{headers}  Create Dictionary   api_key=special-key123
+    ${response}     DELETE On Session   alias=petstore      url=pet/605     headers=${headers}     expected_status=404
+    Status Should Be    404
