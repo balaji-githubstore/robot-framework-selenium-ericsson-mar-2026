@@ -1,116 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-02T13:00:14.325259" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo1 Basic Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo1_basic_suite.robot">
-<test id="s1-t1" name="TC2" line="18">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-04-02T13:00:14.759564" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-02T13:00:14.759160" elapsed="63.672944"/>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-02T16:58:37.073058" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1" source="C:\AutomationSession\AutomationProject\demo7_autoit\demo1.robot">
+<test id="s1-t1" name="TC1" line="5">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-04-02T16:58:42.267156" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-04-02T16:58:37.265976" elapsed="5.002622"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2026-04-02T13:01:18.464482" level="INFO">Exception ignored while finalizing file &lt;_io.BufferedWriter name=-1&gt;:
-Traceback (most recent call last):
-  File "C:\Program Files\Python314\Lib\socket.py", line 743, in write
-    return self._sock.send(b)
-ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host</msg>
-<msg time="2026-04-02T13:01:18.465491" level="FAIL">OSError: [Errno 22] Invalid argument</msg>
-<doc>Maximizes current browser window.</doc>
-<status status="FAIL" start="2026-04-02T13:01:18.432479" elapsed="0.061073">OSError: [Errno 22] Invalid argument</status>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.494132" elapsed="0.000127"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<arg>url=https://www.salesforce.com/form/signup/elf-v2-login/?d=70130000000Enyk</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.494387" elapsed="0.000080"/>
-</kw>
-<kw name="Run Keyword And Ignore Error" owner="BuiltIn">
-<arg>Click Element</arg>
-<arg>id=onetrust-accept-btn-handler</arg>
-<doc>Runs the given keyword with the given arguments and ignores possible error.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.494611" elapsed="0.000092"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>name=UserFirstName</arg>
-<arg>john</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.494821" elapsed="0.000610"/>
-</kw>
-<kw name="Input Text" owner="SeleniumLibrary">
-<arg>name=UserLastName</arg>
-<arg>wick</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.495971" elapsed="0.000243"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<arg>name=CompanyEmployees</arg>
-<arg>21 - 200 employees</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.496433" elapsed="0.000102"/>
-</kw>
-<kw name="Select From List By Label" owner="SeleniumLibrary">
-<arg>name=CompanyCountry</arg>
-<arg>Germany</arg>
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.496638" elapsed="0.000066"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>xpath=(//div[@class='checkbox-ui'])[2]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.496804" elapsed="0.000063"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>name=start my free trial</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.496959" elapsed="0.000062"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<arg>name=start my free trial</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497110" elapsed="0.000058"/>
-</kw>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${actual_header}</var>
-<arg>xpath=//span[contains(text(),'Start your free')]</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497296" elapsed="0.000093"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${actual_header}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497496" elapsed="0.000067"/>
-</kw>
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${actual_header}</arg>
-<arg>Start your free trial today.</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497660" elapsed="0.000067"/>
+<kw name="Send" owner="AutoItLibrary">
+<arg>HELLO</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2026-04-02T16:58:42.268844" elapsed="0.102901"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<arg>3s</arg>
+<msg time="2026-04-02T16:58:47.373223" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497820" elapsed="0.000063"/>
+<status status="PASS" start="2026-04-02T16:58:42.372039" elapsed="5.001443"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2026-04-02T13:01:18.497974" elapsed="0.000061"/>
+<kw name="Send" owner="AutoItLibrary">
+<arg>HELLO</arg>
+<doc>method Send</doc>
+<status status="PASS" start="2026-04-02T16:58:47.373664" elapsed="0.102774"/>
 </kw>
-<status status="FAIL" start="2026-04-02T13:00:14.757668" elapsed="63.740564">OSError: [Errno 22] Invalid argument</status>
+<status status="PASS" start="2026-04-02T16:58:37.262857" elapsed="10.213873"/>
 </test>
-<status status="FAIL" start="2026-04-02T13:00:14.347927" elapsed="64.150760"/>
+<status status="PASS" start="2026-04-02T16:58:37.094278" elapsed="10.383014"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Demo1 Basic Suite" id="s1" pass="0" fail="1" skip="0">Demo1 Basic Suite</stat>
+<stat name="Demo1" id="s1" pass="1" fail="0" skip="0">Demo1</stat>
 </suite>
 </statistics>
 <errors>
