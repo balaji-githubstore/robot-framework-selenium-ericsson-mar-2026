@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-04-02T10:52:57.190532" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo4 Using Setup" source="C:\AutomationSession\AutomationProject\demo4_api_suite\demo4_using_setup.robot">
-<kw name="Create Session with Bearer Token" type="SETUP">
-<msg time="2026-04-02T10:52:57.239381" level="FAIL">No keyword with name 'Create Session with Bearer Token' found.</msg>
-<status status="FAIL" start="2026-04-02T10:52:57.239221" elapsed="0.001933">No keyword with name 'Create Session with Bearer Token' found.</status>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-02T11:39:04.513160" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1 Suite" source="C:\AutomationSession\AutomationProject\demo5_db\demo1_suite.robot">
+<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
+<msg time="2026-04-02T11:39:04.628075" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-04-02T11:39:04.631751" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-04-02T11:39:04.649371" level="INFO">Connect to DB using : pymysql.connect(db='sql8821965', user='sql8821965', passwd=***, host='sql8.freesqldatabase.com', port=3306, charset='utf8mb4')</msg>
+<msg time="2026-04-02T11:39:06.738329" level="FAIL">OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</msg>
+<arg>db_module=pymysql</arg>
+<arg>db_name=sql8821965</arg>
+<arg>db_user=sql8821965</arg>
+<arg>db_password=QTwZRZ7Un3</arg>
+<arg>db_host=sql8.freesqldatabase.com</arg>
+<arg>db_port=3306</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="FAIL" start="2026-04-02T11:39:04.627535" elapsed="2.133465">OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </kw>
-<test id="s1-t1" name="TC1 Verify List Repo For Valid User" line="9">
-<status status="FAIL" start="2026-04-02T10:52:57.241360" elapsed="0.000544">Parent suite setup failed:
-No keyword with name 'Create Session with Bearer Token' found.</status>
+<test id="s1-t1" name="TC1" line="11">
+<status status="FAIL" start="2026-04-02T11:39:06.761356" elapsed="0.000612">Parent suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </test>
-<kw name="Delete All Sessions" type="TEARDOWN">
-<msg time="2026-04-02T10:52:57.243311" level="FAIL">No keyword with name 'Delete All Sessions' found.</msg>
-<status status="FAIL" start="2026-04-02T10:52:57.243203" elapsed="0.000202">No keyword with name 'Delete All Sessions' found.</status>
+<kw name="Disconnect From All Databases" owner="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from all the databases -
+useful when testing with multiple database connections (aliases).</doc>
+<status status="PASS" start="2026-04-02T11:39:06.762653" elapsed="0.000249"/>
 </kw>
-<doc>Using setup.resource for accessing the available session</doc>
-<status status="FAIL" start="2026-04-02T10:52:57.204797" elapsed="0.038709">Suite setup failed:
-No keyword with name 'Create Session with Bearer Token' found.
-
-Also suite teardown failed:
-No keyword with name 'Delete All Sessions' found.</status>
+<status status="FAIL" start="2026-04-02T11:39:04.527281" elapsed="2.235718">Suite setup failed:
+OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
 </suite>
 <statistics>
 <total>
@@ -27,7 +36,7 @@ No keyword with name 'Delete All Sessions' found.</status>
 <tag>
 </tag>
 <suite>
-<stat name="Demo4 Using Setup" id="s1" pass="0" fail="1" skip="0">Demo4 Using Setup</stat>
+<stat name="Demo1 Suite" id="s1" pass="0" fail="1" skip="0">Demo1 Suite</stat>
 </suite>
 </statistics>
 <errors>
