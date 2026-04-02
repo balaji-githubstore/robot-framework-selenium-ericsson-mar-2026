@@ -5,16 +5,19 @@ Library    String
 
 *** Test Cases ***
 TC1
+    [Tags]  smoke   regression
 #    Log To Console    ${browser_name}
     Log To Console    message=hello world
     Log To Console    Welcome to robot framework session
     
 TC2
+    [Tags]  regression
     ${my_name}  Set Variable  balaji
     Log To Console    ${my_name}
     Set Local Variable    ${number}     4500
 
 TC3
+    [Tags]  smoke
     ${radius}   Set Variable    45
     ${output}    Evaluate    3.14*${radius}*${radius} 
     Log To Console    ${output}

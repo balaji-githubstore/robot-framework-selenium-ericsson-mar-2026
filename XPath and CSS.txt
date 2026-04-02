@@ -16,12 +16,95 @@ Grouping of xpath - count at 1
 (//div[@class='checkbox-ui'])[2]
 
 
-Example: verify it using ctrl+f 
+normalize-space
+//tagname[normalize-space()='']
+//tagname[contains(normalize-space(),'')]
+
+
+And-or
+
+
+parent-child
+
+child
+//div[@id='book-flight']/div/form/div/div
+
+
+ancestor-descendant
+
+descendant (any child)
+//div[@id='book-flight']/descendant::input[@name='dateDeparture']
+or
+//div[@id='book-flight']//input[@name='dateDeparture']
+
+
+following-preceding
+
+//span[contains(text(),'Enter your mobile number')]/following::input[@dir='ltr']
+//span[contains(text(),'Enter your mobile number')]/following::input
+
+
+
+Upload
+//input[@type='file']
+
+
+
+Example: verify it using ctrl+f
 //span[text()='Log in']
 //button[text()='Accept All Cookies']
 //div[@class='checkbox-ui']
-
 //input[contains(@id,'UserFirstName')]
-
 //span[contains(text(),'your free')]
+//a[contains(@href,'facebook.com')]
+
+//img[@alt='Go']
+//img[contains(@src,'go.gif')]
+
+//frame[@name='login_page']
+//frame[contains(@src,'RSNBLogin')]
+
+--------------------------------------------------------
+CSS Selector
+#id
+.classname
+tagname[attribute='']
+[attribute='']
+
+Example:
+#authUser
+
+select[name='languageChoice']
+
+
+
+
+Host: sql8.freesqldatabase.com
+Database name: sql8821965
+Database user: sql8821965
+Database password: QTwZRZ7Un3
+Port number: 3306
+
+
+
+Table - Persons
+
+PersonID, name, country
+
+
+
+
+
+
+john, john123, Invalid credentials
+saul, saul123, Invalid credentials
+
+
+
+HELLOHELLO
+
+
+
+
+
 
