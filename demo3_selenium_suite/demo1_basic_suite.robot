@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 
 *** Test Cases ***
 TC1
-    Open Browser    browser=chrome
+    Open Browser    browser=edge
     Maximize Browser Window
     Go To    url=https://www.facebook.com/
 #    get the title and print
