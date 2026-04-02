@@ -14,6 +14,10 @@ Suite Setup     Connect To Database     db_module=pymysql   db_name=sql8821965  
 
 Suite Teardown      Disconnect From All Databases
 
+Test Setup    Log   test started
+Test Teardown  Log  test end
+
+
 *** Test Cases ***
 TC1
     Table Must Exist    table_name=Persons
