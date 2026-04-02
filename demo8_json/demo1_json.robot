@@ -4,7 +4,6 @@ JSON expression very important
 *** Settings ***
 Library     RPA.JSON
 
-
 *** Test Cases ***
 TC1
     ${json}  Load JSON from file    ${EXECDIR}${/}config${/}data.json
