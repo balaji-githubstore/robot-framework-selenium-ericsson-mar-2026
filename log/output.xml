@@ -1,138 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-01T17:18:57.117410" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo3 Alert Suite" source="C:\AutomationSession\AutomationProject\demo3_selenium_suite\demo3_alert_suite.robot">
-<test id="s1-t1" name="TC1 Javascript Alert" line="8">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2026-04-01T17:18:57.434393" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T17:18:57.434016" elapsed="0.661534"/>
+<robot generator="Robot 7.4.2 (Python 3.13.12 on win32)" generated="2026-04-02T09:51:23.129982" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo2 Petstore Suite" source="C:\AutomationSession\AutomationProject\demo4_api_suite\demo2_petstore_suite.robot">
+<kw name="Create Session" owner="RequestsLibrary" type="SETUP">
+<msg time="2026-04-02T09:51:23.570019" level="INFO">Creating Session using : alias=petstore, url=https://petstore.swagger.io/v2, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>alias=petstore</arg>
+<arg>url=https://petstore.swagger.io/v2</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-04-02T09:51:23.569662" elapsed="0.002068"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.095940" elapsed="0.040024"/>
+<test id="s1-t1" name="TC2 Update Valid Pet" line="18">
+<kw name="Get File For Streaming Upload" owner="RequestsLibrary">
+<msg time="2026-04-02T09:51:23.573291" level="INFO">${json_body} = &lt;_io.BufferedReader name='C:\\AutomationSession\\AutomationProject\\files\\update_pet.json'&gt;</msg>
+<var>${json_body}</var>
+<arg>path=${EXECDIR}${/}files${/}update_pet.json</arg>
+<doc>Opens and returns a file descriptor of a specified file to be passed as ``data`` parameter
+to other requests keywords.</doc>
+<status status="PASS" start="2026-04-02T09:51:23.572508" elapsed="0.000956"/>
 </kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.136278" elapsed="0.009767"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2026-04-02T09:51:23.574687" level="INFO">&amp;{headers} = { Content-Type=application/json | api_key=8728878237 }</msg>
+<var>&amp;{headers}</var>
+<arg>Content-Type=application/json</arg>
+<arg>api_key=8728878237</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2026-04-02T09:51:23.573762" elapsed="0.001063"/>
 </kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:18:58.146554" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
-<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.146309" elapsed="0.535247"/>
+<kw name="PUT On Session" owner="RequestsLibrary">
+<msg time="2026-04-02T09:51:24.763214" level="INFO">PUT Request : url=https://petstore.swagger.io/v2/pet 
+ path_url=/v2/pet 
+ headers={'User-Agent': 'python-requests/2.33.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'api_key': '8728878237', 'Content-Length': '231'} 
+ body=&lt;_io.BufferedReader name='C:\\AutomationSession\\AutomationProject\\files\\update_pet.json'&gt; 
+ </msg>
+<msg time="2026-04-02T09:51:24.763502" level="INFO">PUT Response : url=https://petstore.swagger.io/v2/pet 
+ status=200, reason=OK 
+ headers={'Date': 'Thu, 02 Apr 2026 04:21:24 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'Access-Control-Allow-Methods': 'GET, POST, DELETE, PUT', 'Access-Control-Allow-Headers': 'Content-Type, api_key, Authorization', 'Server': 'Jetty(9.2.9.v20150224)'} 
+ body={"id":605,"category":{"id":0,"name":"b1"},"name":"dog-605","photoUrls":["string"],"tags":[{"id":0,"name":"string"}],"status":"available"} 
+ </msg>
+<msg time="2026-04-02T09:51:24.763784" level="INFO">C:\DemoProject\.venv\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'petstore.swagger.io'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-04-02T09:51:24.763992" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>alias=petstore</arg>
+<arg>url=pet</arg>
+<arg>headers=${headers}</arg>
+<arg>data=${json_body}</arg>
+<arg>expected_status=200</arg>
+<doc>Sends a PUT request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-04-02T09:51:23.575054" elapsed="1.189008"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:18:58.682512" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
-<arg>xpath=//img[@alt='Go']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.681850" elapsed="0.104485"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:18:58.787280" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:20</msg>
-<msg time="2026-04-01T17:18:58.800805" level="INFO">${actual_alert_text} = Customer ID  cannot be left blank.</msg>
-<var>${actual_alert_text}</var>
-<arg>action=ACCEPT</arg>
-<arg>timeout=20s</arg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.786760" elapsed="0.014219"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${actual_alert_text}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.801458" elapsed="0.000665"/>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-02T09:51:24.765337" level="INFO">{'id': 605, 'category': {'id': 0, 'name': 'b1'}, 'name': 'dog-605', 'photoUrls': ['string'], 'tags': [{'id': 0, 'name': 'string'}], 'status': 'available'}</msg>
+<arg>${response.json()}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-02T09:51:24.764527" elapsed="0.000931"/>
 </kw>
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<arg>${actual_alert_text}</arg>
-<arg>Customer ID${SPACE}${SPACE}cannot be left blank.</arg>
+<arg>${response.json()}[name]</arg>
+<arg>dog-605</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.802360" elapsed="0.000556"/>
+<status status="PASS" start="2026-04-02T09:51:24.765598" elapsed="0.000664"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T17:19:01.803992" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T17:18:58.803077" elapsed="3.001178"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T17:19:01.804479" elapsed="2.208955"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T17:19:04.014320" elapsed="0.000293"/>
-</kw>
-<status status="PASS" start="2026-04-01T17:18:57.432652" elapsed="6.582062"/>
+<status status="PASS" start="2026-04-02T09:51:23.571939" elapsed="1.194497"/>
 </test>
-<test id="s1-t2" name="TC1 Javascript Alert2" line="19">
-<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
-<msg time="2026-04-01T17:19:04.015868" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-04-01T17:19:04.015627" elapsed="1.329207"/>
+<kw name="Delete All Sessions" owner="RequestsLibrary" type="TEARDOWN">
+<msg time="2026-04-02T09:51:24.767313" level="INFO">Deleting All Sessions</msg>
+<doc>Removes all the session objects</doc>
+<status status="PASS" start="2026-04-02T09:51:24.767146" elapsed="0.000314"/>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.345118" elapsed="0.040325"/>
-</kw>
-<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
-<arg>20s</arg>
-<doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.385744" elapsed="0.001483"/>
-</kw>
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:19:05.387648" level="INFO">Opening url 'https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm'</msg>
-<arg>url=https://netbanking.hdfcbank.com/netbanking/IpinResetUsingOTP.htm</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.387449" elapsed="0.280204"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:19:05.668553" level="INFO">Clicking element 'xpath=//img[@alt='Go']'.</msg>
-<arg>xpath=//img[@alt='Go']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.667960" elapsed="0.096801"/>
-</kw>
-<kw name="Alert Should Be Present" owner="SeleniumLibrary">
-<msg time="2026-04-01T17:19:05.765631" level="INFO">HANDLE::&lt;class 'datetime.timedelta'&gt;::0:00:20</msg>
-<arg>text=Customer ID${SPACE}${SPACE}cannot be left blank.</arg>
-<arg>action=ACCEPT</arg>
-<arg>timeout=20s</arg>
-<doc>Verifies that an alert is present and by default, accepts it.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.765064" elapsed="0.007170"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-04-01T17:19:08.773217" level="INFO">Slept 3 seconds.</msg>
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-04-01T17:19:05.772485" elapsed="3.000994"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T17:19:08.773707" elapsed="2.159196"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-04-01T17:19:10.933291" elapsed="0.000222"/>
-</kw>
-<status status="PASS" start="2026-04-01T17:19:04.015200" elapsed="6.918399"/>
-</test>
-<status status="PASS" start="2026-04-01T17:18:57.132140" elapsed="13.802217"/>
+<status status="PASS" start="2026-04-02T09:51:23.150087" elapsed="1.617445"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Demo3 Alert Suite" id="s1" pass="2" fail="0" skip="0">Demo3 Alert Suite</stat>
+<stat name="Demo2 Petstore Suite" id="s1" pass="1" fail="0" skip="0">Demo2 Petstore Suite</stat>
 </suite>
 </statistics>
-<errors>
-</errors>
-</robot>
-tistics>
 <errors>
 </errors>
 </robot>
