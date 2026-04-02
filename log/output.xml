@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-02T11:39:04.513160" rpa="false" schemaversion="5">
-<suite id="s1" name="Demo1 Suite" source="C:\AutomationSession\AutomationProject\demo5_db\demo1_suite.robot">
-<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
-<msg time="2026-04-02T11:39:04.628075" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
-<msg time="2026-04-02T11:39:04.631751" level="INFO">Configuration file doesn't exist</msg>
-<msg time="2026-04-02T11:39:04.649371" level="INFO">Connect to DB using : pymysql.connect(db='sql8821965', user='sql8821965', passwd=***, host='sql8.freesqldatabase.com', port=3306, charset='utf8mb4')</msg>
-<msg time="2026-04-02T11:39:06.738329" level="FAIL">OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</msg>
-<arg>db_module=pymysql</arg>
-<arg>db_name=sql8821965</arg>
-<arg>db_user=sql8821965</arg>
-<arg>db_password=QTwZRZ7Un3</arg>
-<arg>db_host=sql8.freesqldatabase.com</arg>
-<arg>db_port=3306</arg>
-<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
-Along with listed commonly used arguments (`db_name`, `db_host` etc.)
-you can set any other DB module specific parameters as key/value pairs.</doc>
-<status status="FAIL" start="2026-04-02T11:39:04.627535" elapsed="2.133465">OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
+<robot generator="Robot 7.4.2 (Python 3.14.3 on win32)" generated="2026-04-02T12:30:14.216177" rpa="false" schemaversion="5">
+<suite id="s1" name="Demo1" source="C:\AutomationSession\AutomationProject\demo6_faker\demo1.robot">
+<test id="s1-t1" name="TC1" line="5">
+<kw name="Address" owner="FakerLibrary">
+<msg time="2026-04-02T12:30:14.612642" level="INFO">${address_data} = PSC 4488, Box 1656
+APO AA 55398</msg>
+<var>${address_data}</var>
+<doc>:example: '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
+<status status="PASS" start="2026-04-02T12:30:14.612229" elapsed="0.001764"/>
 </kw>
-<test id="s1-t1" name="TC1" line="11">
-<status status="FAIL" start="2026-04-02T11:39:06.761356" elapsed="0.000612">Parent suite setup failed:
-OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${address_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-02T12:30:14.614377" elapsed="0.000586"/>
+</kw>
+<status status="PASS" start="2026-04-02T12:30:14.611122" elapsed="0.004023"/>
 </test>
-<kw name="Disconnect From All Databases" owner="DatabaseLibrary" type="TEARDOWN">
-<doc>Disconnects from all the databases -
-useful when testing with multiple database connections (aliases).</doc>
-<status status="PASS" start="2026-04-02T11:39:06.762653" elapsed="0.000249"/>
+<test id="s1-t2" name="TC1" line="8">
+<kw name="Credit Card Full" owner="FakerLibrary">
+<msg time="2026-04-02T12:30:14.617258" level="INFO">${address_data} = Maestro
+Kenneth Smith
+630444175057 04/32
+CVV: 338
+</msg>
+<var>${address_data}</var>
+<doc>Generate a set of credit card details.</doc>
+<status status="PASS" start="2026-04-02T12:30:14.616565" elapsed="0.000793"/>
 </kw>
-<status status="FAIL" start="2026-04-02T11:39:04.527281" elapsed="2.235718">Suite setup failed:
-OperationalError: (2003, "Can't connect to MySQL server on 'sql8.freesqldatabase.com' ([WinError 10061] No connection could be made because the target machine actively refused it)")</status>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${address_data}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-04-02T12:30:14.617489" elapsed="0.000387"/>
+</kw>
+<status status="PASS" start="2026-04-02T12:30:14.615754" elapsed="0.002252"/>
+</test>
+<status status="PASS" start="2026-04-02T12:30:14.233148" elapsed="0.385144"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Demo1 Suite" id="s1" pass="0" fail="1" skip="0">Demo1 Suite</stat>
+<stat name="Demo1" id="s1" pass="2" fail="0" skip="0">Demo1</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-04-02T12:30:14.615910" level="WARN">Multiple tests with name 'TC1' executed in suite 'Demo1'.</msg>
 </errors>
 </robot>

@@ -8,14 +8,15 @@ PersonID int PRIMARY KEY,
 
 *** Settings ***
 Library     DatabaseLibrary
+Library    SeleniumLibrary
 
 Suite Setup     Connect To Database     db_module=pymysql   db_name=sql8821965    db_user=sql8821965
 ...   db_password=QTwZRZ7Un3    db_host=sql8.freesqldatabase.com       db_port=3306       alias=db1
 
 Suite Teardown      Disconnect From All Databases
 
-Test Setup    Log   test started
-Test Teardown  Log  test end
+Test Setup    Open Browser      browser=chrome
+Test Teardown  Close Browser
 
 
 *** Test Cases ***
