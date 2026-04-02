@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.2 on win32)" generated="2026-04-02T12:09:29.131933" rpa="false" schemaversion="5">
+<suite id="s1" name="Robot-Framework-Selenium-Ericsson-Mar-2026" source="D:\Mine\Company\Ericsson Mar 2026\robot-framework-selenium-ericsson-mar-2026">
+<suite id="s1-s1" name="Demo5 Db" source="D:\Mine\Company\Ericsson Mar 2026\robot-framework-selenium-ericsson-mar-2026\demo5_db">
+<suite id="s1-s1-s1" name="Demo1 Suite" source="D:\Mine\Company\Ericsson Mar 2026\robot-framework-selenium-ericsson-mar-2026\demo5_db\demo1_suite.robot">
+<kw name="Connect To Database" owner="DatabaseLibrary" type="SETUP">
+<msg time="2026-04-02T12:09:29.298193" level="INFO">Looking for configuration file: 'resources\db.cfg'</msg>
+<msg time="2026-04-02T12:09:29.298911" level="INFO">Configuration file doesn't exist</msg>
+<msg time="2026-04-02T12:09:29.361659" level="INFO">Connect to DB using : pymysql.connect(db='sql8821965', user='sql8821965', passwd=***, host='sql8.freesqldatabase.com', port=3306, charset='utf8mb4')</msg>
+<arg>db_module=pymysql</arg>
+<arg>db_name=sql8821965</arg>
+<arg>db_user=sql8821965</arg>
+<arg>db_password=QTwZRZ7Un3</arg>
+<arg>db_host=sql8.freesqldatabase.com</arg>
+<arg>db_port=3306</arg>
+<arg>alias=db1</arg>
+<doc>Creates a database connection using the DB API 2.0 ``db_module`` and the parameters provided.
+Along with listed commonly used arguments (`db_name`, `db_host` etc.)
+you can set any other DB module specific parameters as key/value pairs.</doc>
+<status status="PASS" start="2026-04-02T12:09:29.296704" elapsed="1.090140"/>
+</kw>
+<test id="s1-s1-s1-t1" name="TC5 Select" line="41">
+<kw name="Query" owner="DatabaseLibrary">
+<msg time="2026-04-02T12:09:30.397859" level="INFO" html="true">Executing sql:&lt;br&gt;&lt;code style="font-weight: bold;"&gt;select * from Persons&lt;/code&gt;</msg>
+<msg time="2026-04-02T12:09:30.599361" level="INFO">Commit the transaction</msg>
+<msg time="2026-04-02T12:09:30.799641" level="INFO" html="true">&lt;div style="max-width: 100%; overflow-x: auto; max-height: 500px; overflow-y: auto;"&gt;&lt;table style="width: auto; border-collapse: collapse; border: 2px solid rgb(140 140 140)"&gt;&lt;caption style="text-align: left; font-weight: bold; padding: 5px;"&gt;Query returned 11 rows&lt;/caption&gt;&lt;tr&gt;&lt;th scope="col" style="position: sticky; top: 0; color:black; background-color: #d6ecd4; border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Row&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;PersonID&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;LastName&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;FirstName&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Address&lt;/th&gt;&lt;th scope="col" style="position: sticky; top: 0; background-color: #505050; color: #fff;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;City&lt;/th&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;0&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Smith&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;John&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;123 Main St&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;New York&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;1&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Johnson&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Emily&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;456 Maple Ave&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Los Angeles&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;2&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Williams&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Michael&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;789 Oak Rd&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Chicago&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;3&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Brown&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Sarah&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;321 Pine St&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Houston&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;4&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Jones&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;David&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;654 Elm St&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Phoenix&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;5&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Garcia&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Maria&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;987 Cedar Blvd&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Philadelphia&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;6&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;7&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Miller&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;James&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;246 Birch Ln&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;San Antonio&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;7&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;8&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Davis&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Linda&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;135 Spruce Ct&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;San Diego&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;8&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;9&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Rodriguez&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Carlos&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;864 Walnut Dr&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Dallas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;9&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;11&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Martinez&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Sofia&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;753 Chestnut Pl&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;San Jose&lt;/td&gt;&lt;/tr&gt;&lt;tr style="background-color: var(--secondary-color, #eee)"&gt;&lt;th scope="row" style="color:black; background-color: #d6ecd4;border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;10&lt;/th&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;101&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Martinez&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;Sofia&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;753 Chestnut Pl&lt;/td&gt;&lt;td style="border: 1px solid rgb(160 160 160);padding: 8px 10px;text-align: center;"&gt;San Jose&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg time="2026-04-02T12:09:30.800595" level="INFO">${output} = ((1, 'Smith', 'John', '123 Main St', 'New York'), (2, 'Johnson', 'Emily', '456 Maple Ave', 'Los Angeles'), (3, 'Williams', 'Michael', '789 Oak Rd', 'Chicago'), (4, 'Brown', 'Sarah', '321 Pine St', 'Ho...</msg>
+<var>${output}</var>
+<arg>select * from Persons</arg>
+<doc>Runs a query with the ``select_statement`` and returns the result as list of rows.
+The type of row values depends on the database module -
+usually they are tuples or tuple-like objects.</doc>
+<status status="PASS" start="2026-04-02T12:09:30.397327" elapsed="0.403517"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-02T12:09:30.802979" level="INFO">((1, 'Smith', 'John', '123 Main St', 'New York'), (2, 'Johnson', 'Emily', '456 Maple Ave', 'Los Angeles'), (3, 'Williams', 'Michael', '789 Oak Rd', 'Chicago'), (4, 'Brown', 'Sarah', '321 Pine St', 'Houston'), (5, 'Jones', 'David', '654 Elm St', 'Phoenix'), (6, 'Garcia', 'Maria', '987 Cedar Blvd', 'Philadelphia'), (7, 'Miller', 'James', '246 Birch Ln', 'San Antonio'), (8, 'Davis', 'Linda', '135 Spruce Ct', 'San Diego'), (9, 'Rodriguez', 'Carlos', '864 Walnut Dr', 'Dallas'), (11, 'Martinez', 'Sofia', '753 Chestnut Pl', 'San Jose'), (101, 'Martinez', 'Sofia', '753 Chestnut Pl', 'San Jose'))</msg>
+<arg>${output}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-02T12:09:30.801834" elapsed="0.001562"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-04-02T12:09:30.805248" level="INFO">Length is 11.</msg>
+<msg time="2026-04-02T12:09:30.806052" level="INFO">${row_count} = 11</msg>
+<var>${row_count}</var>
+<arg>${output}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-04-02T12:09:30.803975" elapsed="0.002344"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-02T12:09:30.807968" level="INFO">11</msg>
+<arg>${row_count}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-02T12:09:30.807059" elapsed="0.001297"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-04-02T12:09:30.809655" level="INFO">New York</msg>
+<arg>${output}[0][4]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-04-02T12:09:30.808788" elapsed="0.001196"/>
+</kw>
+<status status="PASS" start="2026-04-02T12:09:30.387513" elapsed="0.422939"/>
+</test>
+<kw name="Disconnect From All Databases" owner="DatabaseLibrary" type="TEARDOWN">
+<doc>Disconnects from all the databases -
+useful when testing with multiple database connections (aliases).</doc>
+<status status="PASS" start="2026-04-02T12:09:30.826856" elapsed="0.000764"/>
+</kw>
+<status status="PASS" start="2026-04-02T12:09:29.235052" elapsed="1.592761"/>
+</suite>
+<status status="PASS" start="2026-04-02T12:09:29.226494" elapsed="1.620809"/>
+</suite>
+<status status="PASS" start="2026-04-02T12:09:29.140473" elapsed="1.716858"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Robot-Framework-Selenium-Ericsson-Mar-2026" id="s1" pass="1" fail="0" skip="0">Robot-Framework-Selenium-Ericsson-Mar-2026</stat>
+<stat name="Demo5 Db" id="s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Selenium-Ericsson-Mar-2026.Demo5 Db</stat>
+<stat name="Demo1 Suite" id="s1-s1-s1" pass="1" fail="0" skip="0">Robot-Framework-Selenium-Ericsson-Mar-2026.Demo5 Db.Demo1 Suite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
